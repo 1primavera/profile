@@ -1,39 +1,139 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Typing Effect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-    #typingText {
-      white-space: pre-line; /* 줄바꿈 문자 \n 적용 */
-      font-size: 24px;
-      font-weight: bold;
+    h1,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    #modalOpenButton {
+      cursor: pointer;
+      /* background-color: antiquewhite; */
+      box-shadow: 10px;
+      width: 500px;
+      padding: 30px 0;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px #c6c6c6;
+    }
+
+    #modalOpenButton:hover {
+      background-color: rgba(60, 146, 130, 0.5);
+      opacity: .7
+    }
+
+    #modalCloseButton {
+      cursor: pointer;
+      width: 200px;
+      height: 50px;
+      font-size: 1rem;
+    }
+
+    #modalContainer {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    #modalContent {
+      /* position: absolute; */
+      background-color: #ffffff;
+      width: 800px;
+      height: 500px;
+      padding: 15px;
+      justify-content: center;
+      margin: auto auto;
+    }
+
+    .modal-img {
+      width: 300px;
+      height: 200px;
+      margin: 0 auto;
+
+    }
+
+    .modal-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 20px;
+    }
+
+    .txt-box {
       text-align: center;
-      margin-top: 100px;
+    }
+
+
+    #modalContent iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 10px;
+    }
+
+
+    #modalContainer.hidden {
+      display: none;
+    }
+
+    #modalCloseButton {
+      margin: 0 auto;
     }
   </style>
 </head>
-<body>
 
-  <div id="typingText"></div>
+<body>
+  <div class="modal" id="modalOpenButton">
+    <div class="modal-img">
+      <img src="images/gallery_mc.gif" alt="">
+    </div>
+    <div class="txt-box">
+      <h1>맥도날드 앱 리뉴얼</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+  </div>
+
+
+
+
+  <div id="modalContainer" class="hidden">
+    <div id="modalContent">
+      <iframe src="images/mc.pdf" frameborder="0"></iframe>
+      <button id="modalCloseButton">닫기</button>
+    </div>
+  </div>
+
+
+
 
   <script>
-    const text = "나는 박가연입니다\nUX/UI 디자이너입니다";
-    const typingTarget = document.getElementById("typingText");
-    let index = 0;
 
-    function typeWriter() {
-      if (index < text.length) {
-        typingTarget.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeWriter, 100); // 100ms 간격으로 타이핑
-      }
-    }
+    const modalOpenButton = document.getElementById('modalOpenButton');
+    const modalCloseButton = document.getElementById('modalCloseButton');
+    const modal = document.getElementById('modalContainer');
 
-    // 모든 요소가 로드된 후 실행
-    window.addEventListener('DOMContentLoaded', typeWriter);
+    modalOpenButton.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+    });
+
+    modalCloseButton.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
   </script>
-
 </body>
+
 </html>

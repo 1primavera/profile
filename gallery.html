@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="website.css">
+    <link rel="stylesheet" href="gallery.css">
 </head>
 
 <body>
@@ -33,88 +33,77 @@
     </header>
 
 
-    <div class="section4">
-        <div>
-            <div class="mm">
-                <div class="main-title">
-                    <h1 class="txt-bar">GALLERY</h1>
+
+
+
+
+    <div class="gallery-container">
+        <div class="box">
+            <div class="modal-trigger" data-modal="modal2">
+                <div class="modal-img">
+                    <img src="images/gallery_ob.gif" alt="">
                 </div>
-                <p>디자이너를 넘어 개발자가 되는것이 목표입니다.</p>
+                <div class="txt-box">
+                    <h1>자기소개 페이지</h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
             </div>
-            <div class="box-container">
-                <div class="sub-container">
-                    <div class="box-project">
-                        <img src="images/profile.jpeg" alt="">
-                        <button class="project-btn" type="button" onclick="">자세히보기</button>
-                    </div>
-                    <div class="txt-project">
-                        <h2>맥도날드 앱 리뉴얼</h2>
-                        <dl>
-                            <dt>기간</dt>
-                            <dd>2025.05</dd>
-
-                            <dt>설명</dt>
-                            <dd>사용 불편한 앱 리디자인했습니다.</dd>
-
-                            <dt>사용 스킬</dt>
-                            <dd>피그마, 포토샵.</dd>
-                        </dl>
-                    </div>
+            <div class="modal-container hidden" id="modal2">
+                <div id="modalContent">
+                    <iframe src="images/mc.pdf" frameborder="0"></iframe>
+                    <button class="modal-close">닫기</button>
                 </div>
-
             </div>
-            <div class="box-container">
-                <div class="sub-container">
-                    <div class="box-project">
-                        <img src="images/profile.jpeg" alt="">
-                        <button class="project-btn" type="button" onclick="">자세히보기</button>
-                    </div>
-                    <div class="txt-project">
-                        <h2>맥도날드 앱 리뉴얼</h2>
-                        <dl>
-                            <dt>기간</dt>
-                            <dd>2025.05</dd>
+        </div>
 
-                            <dt>설명</dt>
-                            <dd>사용 불편한 앱 리디자인했습니다.</dd>
 
-                            <dt>사용 스킬</dt>
-                            <dd>피그마, 포토샵.</dd>
-                        </dl>
-                    </div>
+        <div class="box">
+            <div class="modal-trigger" data-modal="modal2">
+                <div class="modal-img">
+                    <img src="images/gallery_ob.gif" alt="">
                 </div>
-
+                <div class="txt-box">
+                    <h1>맥도날드 앱 리뉴얼</h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
             </div>
-            <div class="box-container">
-                <div class="sub-container">
-                    <div class="box-project">
-                        <img src="images/profile.jpeg" alt="">
-                        <button class="project-btn" type="button" onclick="">자세히보기</button>
-                    </div>
-                    <div class="txt-project">
-                        <h2>맥도날드 앱 리뉴얼</h2>
-                        <dl>
-                            <dt>기간</dt>
-                            <dd>2025.05</dd>
-
-                            <dt>설명</dt>
-                            <dd>사용 불편한 앱 리디자인했습니다.</dd>
-
-                            <dt>사용 스킬</dt>
-                            <dd>피그마, 포토샵.</dd>
-                        </dl>
-                    </div>
+            <div class="modal-container hidden" id="modal2">
+                <div class="modal-content">
+                    <iframe src="images/mc.pdf" frameborder="0"></iframe>
+                    <button class="modal-close">닫기</button>
                 </div>
+            </div>
+        </div>
 
+
+        <div class="box">
+            <div class="modal-trigger" data-modal="modal3">
+                <div class="modal-img">
+                    <img src="images/gallery_mc.gif" alt="">
+                </div>
+                <div class="txt-box">
+                    <h1>맥도날드 앱 리뉴얼</h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="modal-container hidden" id="modal3">
+                <div class="modal-content">
+                    <iframe src="images/mc.pdf" frameborder="0"></iframe>
+                    <button class="modal-close">닫기</button>
+                </div>
             </div>
         </div>
     </div>
+
+
+
+
 
     <footer>
 
         <div class="ft">
             <div class="img1">
-                <img src="images/insta.png" alt="">
+                <a href="https://www.instagram.com/_designminty"><img src="images/insta.png" alt=""></a>
                 <p>instagram</p>
             </div>
             <div class="img2">
@@ -130,6 +119,44 @@
 
 
 
+
+    <script>
+        // 모든 모달 트리거와 닫기 버튼에 이벤트 리스너 추가
+        document.addEventListener('DOMContentLoaded', function () {
+            // 모달 열기
+            const modalTriggers = document.querySelectorAll('.modal-trigger');
+            modalTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function () {
+                    const modalId = this.getAttribute('data-modal');
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.classList.remove('hidden');
+                    }
+                });
+            });
+
+            // 모달 닫기
+            const closeButtons = document.querySelectorAll('.modal-close');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const modal = this.closest('.modal-container');
+                    if (modal) {
+                        modal.classList.add('hidden');
+                    }
+                });
+            });
+
+            // 모달 배경 클릭시 닫기
+            const modalContainers = document.querySelectorAll('.modal-container');
+            modalContainers.forEach(container => {
+                container.addEventListener('click', function (e) {
+                    if (e.target === this) {
+                        this.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -17,7 +17,7 @@
     <header class="top">
         <h1 class="title"><a href="">Park gayeon</a></h1>
         <nav>
-            <ul>
+            <ul id="navMenu">
                 <li><a href="index.html">home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="timeline.html">Timeline</a></li>
@@ -30,11 +30,15 @@
                 <li><a href="https://www.instagram.com/_designminty"><i class="fa-brands fa-instagram"></a></i>
             </ul>
         </div>
+        <div class="hamburger" id="hamburger">
+            <span class="icon-menu">☰</span>
+            <span class="icon-close" style="display: none;">✕</span>
+        </div>
     </header>
 
     <div class="section1">
         <div class="wallpaper">
-              <div id="typingText"></div>
+            <div id="typingText"></div>
             <button>ABOUT ME</button>
         </div>
         <div class="audio">
@@ -353,19 +357,39 @@
         audio.volume = 0.1;
 
         const text = "I'm Park gayeon\nUX/UI , 퍼블리셔를 목표로 하는 개발자입니다.";
-    const typingTarget = document.getElementById("typingText");
-    let index = 0;
+        const typingTarget = document.getElementById("typingText");
+        let index = 0;
 
-    function typeWriter() {
-      if (index < text.length) {
-        typingTarget.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeWriter, 100); // 100ms 간격으로 타이핑
-      }
-    }
+        function typeWriter() {
+            if (index < text.length) {
+                typingTarget.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100); // 100ms 간격으로 타이핑
+            }
+        }
 
-    // 모든 요소가 로드된 후 실행
-    window.addEventListener('DOMContentLoaded', typeWriter);
+        // 모든 요소가 로드된 후 실행
+        window.addEventListener('DOMContentLoaded', typeWriter);
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById("hamburger");
+            const navMenu = document.getElementById("navMenu");
+            const iconMenu = document.querySelector(".icon-menu");
+            const iconClose = document.querySelector(".icon-close");
+
+            hamburger.addEventListener("click", function () {
+                navMenu.classList.toggle("show");
+
+                // 아이콘 토글
+                const isMenuOpen = navMenu.classList.contains("show");
+                iconMenu.style.display = isMenuOpen ? "none" : "inline";
+                iconClose.style.display = isMenuOpen ? "inline" : "none";
+            });
+        });
     </script>
 </body>
 
