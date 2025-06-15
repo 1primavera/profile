@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Typing Effect</title>
+  <style>
+
+    #typingText {
+      white-space: pre-line; /* 줄바꿈 문자 \n 적용 */
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="typingText"></div>
+
+  <script>
+    const text = "나는 박가연입니다\nUX/UI 디자이너입니다";
+    const typingTarget = document.getElementById("typingText");
+    let index = 0;
+
+    function typeWriter() {
+      if (index < text.length) {
+        typingTarget.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100); // 100ms 간격으로 타이핑
+      }
+    }
+
+    // 모든 요소가 로드된 후 실행
+    window.addEventListener('DOMContentLoaded', typeWriter);
+  </script>
+
+</body>
+</html>
