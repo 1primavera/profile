@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+    <header class="top">
+        <h1 class="title"><a href="index.html">Park gayeon</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <!-- <li><a href="sns.html">SNS</a></li> -->
+            </ul>
+        </nav>
+        <div class="icons">
+            <ul>
+                <li><a href="https://www.instagram.com/_designminty"><i class="fa-brands fa-instagram"></a></i>
+            </ul>
+        </div>
+    </header>
+
+
+
+
+
+
+    <div class="gallery-container">
+        <div class="box">
+            <div class="modal-trigger" data-modal="modal2">
+                <div class="modal-img">
+                    <img src="images/gallery_mc.gif" alt="">
+                </div>
+                <div class="txt-box">
+                    <h1>맥도날드 앱 리뉴얼</h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="modal-container hidden" id="modal2">
+                <div class="modal-content">
+                    <iframe src="images/mc.pdf" frameborder="0"></iframe>
+                    <button class="modal-close">닫기</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="modal-trigger" data-modal="modal2">
+                <div class="modal-img">
+                    <img src="images/gallery_cinebite.gif" alt="">
+                </div>
+                <div class="txt-box">
+                    <h1>영화 추천사이트 시네바이트</h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="modal-container hidden" id="modal2">
+                <div class="modal-content">
+                    <iframe src="images/오비맥주 리디자인.pdf" frameborder="0"></iframe>
+                    <button class="modal-close">닫기</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="modal-trigger" data-modal="modal3">
+                <div class="modal-img">
+                    <img src="images/gallery_introduce.gif" alt="">
+                </div>
+                <div class="txt-box">
+                    <h1>자기소개 페이지</h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="modal-container hidden" id="modal3">
+                <div class="modal-content">
+                    <iframe src="images/mc.pdf" frameborder="0"></iframe>
+                    <button class="modal-close">닫기</button>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="modal-trigger" data-modal="modal3">
+                <div class="modal-img">
+                    <img src="images/gallery_ob.gif" alt="">
+                </div>
+                <div class="txt-box">
+                    <h1>오비맥주 웹사이트 리디자인</h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="modal-container hidden" id="modal3">
+                <div class="modal-content">
+                    <iframe src="images/오비맥주 리디자인.pdf" frameborder="0"></iframe>
+                    <button class="modal-close">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+
+        <div class="ft">
+            <div class="img1">
+                <a href="https://www.instagram.com/_designminty"><img src="images/insta.png" alt=""></a>
+                <p>instagram</p>
+            </div>
+            <div class="img2">
+                <img src="images/profile.jpeg" alt="">
+                <p>instagram</p>
+            </div>
+        </div>
+        <div class="p">
+            <p>© 2025 - Park gayeon. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+
+    <script>
+        // 모든 모달 트리거와 닫기 버튼에 이벤트 리스너 추가
+        document.addEventListener('DOMContentLoaded', function () {
+            // 모달 열기
+            const modalTriggers = document.querySelectorAll('.modal-trigger');
+            modalTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function () {
+                    const modalId = this.getAttribute('data-modal');
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.classList.remove('hidden');
+                    }
+                });
+            });
+
+            // 모달 닫기
+            const closeButtons = document.querySelectorAll('.modal-close');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const modal = this.closest('.modal-container');
+                    if (modal) {
+                        modal.classList.add('hidden');
+                    }
+                });
+            });
+
+            // 모달 배경 클릭시 닫기
+            const modalContainers = document.querySelectorAll('.modal-container');
+            modalContainers.forEach(container => {
+                container.addEventListener('click', function (e) {
+                    if (e.target === this) {
+                        this.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+
+
+    </script>
+</body>
+
+</html>

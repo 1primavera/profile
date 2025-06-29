@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="website.css">
+</head>
+
+<body>
+    <header class="top">
+        <h1 class="title"><a href="index.html">Park gayeon</a></h1>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <!-- <li><a href="sns.html">SNS</a></li> -->
+            </ul>
+        </nav>
+        <div class="icons">
+            <ul>
+                <li><a href="https://www.instagram.com/_designminty"><i class="fa-brands fa-instagram"></a></i>
+            </ul>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span class="icon-menu">☰</span>
+            <span class="icon-close" style="display: none;">✕</span>
+        </div>
+    </header>
+
+    <div class="section1">
+        <div class="wallpaper">
+            <div id="typingText"></div>
+            <button>ABOUT ME</button>
+        </div>
+        <div class="audio">
+            <audio id="myAudio" controls autoplay loop>
+                <source src="images/videoplayback.m4a" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="section2">
+        <h1 class="txt-bar">About</h1>
+        <div class="section2_main">
+            <div class="section2_left-box">
+                <img src="images/profile.jpeg" alt="">
+                <ul>
+                    <li>
+                        <h1>박가연</h1>
+                    </li>
+                    <li>끊임없이 배우며 성장하는 개발자입니다.</li>
+                    <li>· 전화번호:010-5062-9845</li>
+                    <li>· Email:1primavera@naver.com</li>
+                    <li>· 생년월일:19xx.05.11</li>
+                    <li>· 주소:서울시 서대문구</li>
+                </ul>
+            </div>
+            <div class="skill">
+                <h1>SKILL</h1>
+                <div id="Accordion_wrap">
+                    <div class="que">
+                        <span>포토샵</span>
+                        <div class="arrow-wrap">
+                            <span class="arrow-top">↑</span>
+                            <span class="arrow-bottom">↓</span>
+                        </div>
+
+                    </div>
+                    <div class="anw">
+                        <span>포토샵을 잘합니다.</span>
+                    </div>
+                    <div class="que">
+                        <span>일러스트</span>
+                        <div class="arrow-wrap">
+                            <span class="arrow-top">↑</span>
+                            <span class="arrow-bottom">↓</span>
+                        </div>
+                    </div>
+                    <div class="anw">
+                        <span>일러스트를 잘합니다.</span>
+                    </div>
+                    <div class="que">
+                        <span>프리미어프로</span>
+                        <div class="arrow-wrap">
+                            <span class="arrow-top">↑</span>
+                            <span class="arrow-bottom">↓</span>
+                        </div>
+                    </div>
+                    <div class="anw">
+                        <span>프리미어를 잘합니다.</span>
+                        <div class="arrow-wrap">
+                        </div>
+                    </div>
+                    <div class="que">
+                        <span>html</span>
+                        <div class="arrow-wrap">
+                            <span class="arrow-top">↑</span>
+                            <span class="arrow-bottom">↓</span>
+                        </div>
+                    </div>
+                    <div class="anw">
+                        <span>html를 잘합니다.</span>
+                        <div class="arrow-wrap">
+                        </div>
+                    </div>
+                    <div class="que">
+                        <span>css</span>
+                        <div class="arrow-wrap">
+                            <span class="arrow-top">↑</span>
+                            <span class="arrow-bottom">↓</span>
+                        </div>
+                    </div>
+                    <div class="anw">
+                        <span>css를 잘합니다.</span>
+                        <div class="arrow-wrap">
+                        </div>
+                    </div>
+                    <div class="que">
+                        <span>자바스크립트</span>
+                        <div class="arrow-wrap">
+                            <span class="arrow-top">↑</span>
+                            <span class="arrow-bottom">↓</span>
+                        </div>
+                    </div>
+                    <div class="anw">
+                        <span>자바스크립트를 잘합니다.</span>
+                        <div class="arrow-wrap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="section2_right-box1">
+                <div>
+                    <h2>취미미</h2>
+                    <ul>
+                        <li>Lorem ipsum dolor sit afefeawwmet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>어쩌고저쩌ㅓ고곰ㅎㄷㅁㅁ</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>하는일</h2>
+                    <ul>
+                        <li>Photoshop</li>
+                        <li>Illustration</li>
+                        <li>Premier Pro</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section2_right-box2">
+                <div>
+                    <h2>어쩌고</h2>
+                    <ul>
+                        <li>ewafeawfaw</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipssum dolor sit amet.</li>
+                    </ul>
+                </div>S
+                <div>
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>Photoshop</li>
+                        <li>Illustration</li>
+                        <li>Premier Pro</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
+            </div> -->
+
+
+        </div>
+    </div>
+    <div class="section3">
+        <div>
+            <h1 class="txt-bar">Timeline</h1>
+            <div class="timeline1">
+                <div class="timeline-icon"><img src="images/timeline1.png" alt=""></div>
+                <div class="txt-container">
+                    <p class="title">시각디자인과 졸업</p>
+                    <p class="period">2013.03 ~ 2018.02</p>
+                    <p class="introduce">2013.03 ~ 2018.02</p>
+                </div>
+            </div>
+            <div class="timeline2">
+                <div class="timeline-icon"><img src="images/timeline1.png" alt=""></div>
+                <div class="txt-container">
+                    <p class="title">이젠아카데마</p>
+                    <p class="period">2013.03 ~ 2018.02</p>
+                    <p class="introduce">2013.03 ~ 2018.02</p>
+                </div>
+            </div>
+            <div class="timeline3">
+                <div class="timeline-icon"><img src="images/timeline1.png" alt=""></div>
+                <div class="txt-container">
+                    <p class="title">회사다님</p>
+                    <p class="period">2013.03 ~ 2018.02</p>
+                    <p class="introduce">2013.03 ~ 2018.02</p>
+                </div>
+            </div>
+            <div class="timeline4">
+                <div class="timeline-icon"><img src="images/timeline1.png" alt=""></div>
+                <div class="txt-container">
+                    <p class="title">회사다님</p>
+                    <p class="period">2013.03 ~ 2018.02</p>
+                    <p class="introduce">2013.03 ~ 2018.02</p>
+                </div>
+            </div>
+            <div class="timeline5">
+                <div class="timeline-icon"><img src="images/timeline1.png" alt=""></div>
+                <div class="txt-container">
+                    <p class="title">회사다님</p>
+                    <p class="period">2013.03 ~ 2018.02</p>
+                    <p class="introduce">2013.03 ~ 2018.02</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section4">
+        <div>
+            <div class="mm">
+                <div class="main-title">
+                    <h1 class="txt-bar">GALLERY</h1>
+                    <button class="m-btn"><a href="">VIEW</a></button>
+                </div>
+                <p>디자이너를 넘어 개발자가 되는것이 목표입니다.</p>
+            </div>
+            <div class="box-container">
+                <div class="sub-container">
+                    <div class="box-project">
+                        <img src="images/profile.jpeg" alt="">
+                        <button class="project-btn" type="button" onclick="">자세히보기</button>
+                    </div>
+                    <div class="txt-project">
+                        <h2>맥도날드 앱 리뉴얼</h2>
+                        <dl>
+                            <dt>기간</dt>
+                            <dd>2025.05</dd>
+
+                            <dt>설명</dt>
+                            <dd>사용 불편한 앱 리디자인했습니다.</dd>
+
+                            <dt>사용 스킬</dt>
+                            <dd>피그마, 포토샵.</dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
+            <div class="box-container">
+                <div class="sub-container">
+                    <div class="box-project">
+                        <img src="images/profile.jpeg" alt="">
+                        <button class="project-btn" type="button" onclick="">자세히보기</button>
+                    </div>
+                    <div class="txt-project">
+                        <h2>맥도날드 앱 리뉴얼</h2>
+                        <dl>
+                            <dt>기간</dt>
+                            <dd>2025.05</dd>
+
+                            <dt>설명</dt>
+                            <dd>사용 불편한 앱 리디자인했습니다.</dd>
+
+                            <dt>사용 스킬</dt>
+                            <dd>피그마, 포토샵.</dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
+            <div class="box-container">
+                <div class="sub-container">
+                    <div class="box-project">
+                        <img src="images/profile.jpeg" alt="">
+                        <button class="project-btn" type="button" onclick="">자세히보기</button>
+                    </div>
+                    <div class="txt-project">
+                        <h2>맥도날드 앱 리뉴얼</h2>
+                        <dl>
+                            <dt>기간</dt>
+                            <dd>2025.05</dd>
+
+                            <dt>설명</dt>
+                            <dd>사용 불편한 앱 리디자인했습니다.</dd>
+
+                            <dt>사용 스킬</dt>
+                            <dd>피그마, 포토샵.</dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="ft">
+            <a href="https://www.instagram.com/_designminty">
+                <div class="img1">
+                    <img src="images/insta.png" alt="">
+            </a>
+            <p>instagram</p>
+        </div>
+        <div class="img2">
+            <img src="images/profile.jpeg" alt="">
+            <p>instagram</p>
+        </div>
+        </div>
+        <div class="p">
+            <p>© 2025 - Park gayeon. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        $(".que").click(function () {
+            $(this).next(".anw").stop().slideToggle(300);
+            $(this).toggleClass('on').siblings().removeClass('on');
+            $(this).next(".anw").siblings(".anw").slideUp(300); // 1개씩 펼치기
+        });
+        const audio = document.getElementById('myAudio');
+        audio.volume = 0.1;
+
+        const text = "I'm Park gayeon\nUX/UI , 퍼블리셔를 목표로 하는 개발자입니다.";
+        const typingTarget = document.getElementById("typingText");
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                typingTarget.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100); // 100ms 간격으로 타이핑
+            }
+        }
+
+        // 모든 요소가 로드된 후 실행
+        window.addEventListener('DOMContentLoaded', typeWriter);
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById("hamburger");
+            const navMenu = document.getElementById("navMenu");
+            const iconMenu = document.querySelector(".icon-menu");
+            const iconClose = document.querySelector(".icon-close");
+
+            hamburger.addEventListener("click", function () {
+                navMenu.classList.toggle("show");
+
+                // 아이콘 토글
+                const isMenuOpen = navMenu.classList.contains("show");
+                iconMenu.style.display = isMenuOpen ? "none" : "inline";
+                iconClose.style.display = isMenuOpen ? "inline" : "none";
+            });
+        });
+    </script>
+</body>
+
+</html>
