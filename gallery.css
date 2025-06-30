@@ -52,6 +52,7 @@
  .icons {
      list-style-type: none;
      line-height: 50px;
+     font-size: 1.5rem;
  }
 
 
@@ -62,7 +63,7 @@
 
  .gallery-container {
      display: flex;
-     justify-content: space-between;
+     justify-content: space-around;
      align-items: center;
      gap: 30px;
      padding: 50px 20px;
@@ -167,41 +168,24 @@
 
 
 
- footer {
-     margin-top: 100px;
-     padding: 50px 0;
-     /* width: 1200px; */
+  footer {
+     margin: 50px auto;
+     width: 1000px;
      justify-content: center;
-     background-color: aquamarine;
  }
 
  footer img {
      width: 100px;
  }
+footer .ft{
+    text-align: center;
+    display: block;
+}
 
- footer .ft {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     gap: 100px;
- }
-
-
- footer .ft p {
-     text-align: center;
- }
-
- footer .img1 {
-     align-items: center;
- }
-
- footer .p {
-     margin: 0 auto;
-     width: 350px;
-     text-align: center;
-     margin-top: 15px;
-     color: #979797;
- }
+footer .ft p:nth-child(3){
+    margin-top: 20px;
+    color: #9b9b9b;
+}
 
 
 
